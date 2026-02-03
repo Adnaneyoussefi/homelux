@@ -1,40 +1,44 @@
-import { mockProducts } from './mock/data.js';
+import { mockProducts } from './mock/data';
 
-export default defineEventHandler((event) => {
-  const query = getQuery(event);
-  
+export default eventHandler((event) => {
+  // Access query params from the event's node.req.url
+  const url = new URL(event.node.req.url, 'http://localhost');
+  const query = Object.fromEntries(url.searchParams);
+
+  console.log('Query params:', query);
+
   let filteredProducts = [...mockProducts];
 
   // Filter by category
   if (query.category) {
     filteredProducts = filteredProducts.filter(
-      p => p.category === query.category
+        p => p.category === query.category
     );
   }
 
   // Filter by subcategory
   if (query.subcategory) {
     filteredProducts = filteredProducts.filter(
-      p => p.subcategory === query.subcategory
+        p => p.subcategory === query.subcategory
     );
   }
 
   // Filter by price range
   if (query.minPrice) {
     filteredProducts = filteredProducts.filter(
-      p => p.price >= parseFloat(query.minPrice)
+        p => p.price >= parseFloat(query.minPrice)
     );
   }
   if (query.maxPrice) {
     filteredProducts = filteredProducts.filter(
-      p => p.price <= parseFloat(query.maxPrice)
+        p => p.price <= parseFloat(query.maxPrice)
     );
   }
 
   // Filter by rating
   if (query.minRating) {
     filteredProducts = filteredProducts.filter(
-      p => p.rating >= parseFloat(query.minRating)
+        p => p.rating >= parseFloat(query.minRating)
     );
   }
 
@@ -51,10 +55,10 @@ export default defineEventHandler((event) => {
   // Search by name or tags
   if (query.search) {
     const searchLower = query.search.toLowerCase();
-    filteredProducts = filteredProducts.filter(p => 
-      p.name.toLowerCase().includes(searchLower) ||
-      p.description.toLowerCase().includes(searchLower) ||
-      p.tags.some(tag => tag.toLowerCase().includes(searchLower))
+    filteredProducts = filteredProducts.filter(p =>
+        p.name.toLowerCase().includes(searchLower) ||
+        p.description.toLowerCase().includes(searchLower) ||
+        p.tags.some(tag => tag.toLowerCase().includes(searchLower))
     );
   }
 
@@ -73,8 +77,6 @@ export default defineEventHandler((event) => {
       case 'newest':
         filteredProducts.sort((a, b) => b.id - a.id);
         break;
-      default:
-        break;
     }
   }
 
@@ -83,7 +85,7 @@ export default defineEventHandler((event) => {
   const limit = parseInt(query.limit) || 12;
   const start = (page - 1) * limit;
   const end = start + limit;
-  
+
   const paginatedProducts = filteredProducts.slice(start, end);
 
   return {
