@@ -16,7 +16,7 @@
             <NuxtLink to="/shop" class="btn-primary bg-white text-primary-900 hover:bg-primary-50">
               Shop Collection
             </NuxtLink>
-            <NuxtLink to="/shop/home-decor" class="btn-secondary border-white text-white hover:bg-white/10">
+            <NuxtLink to="/shop/home-decor" class="btn-secondary border-white text-primary-900 hover:bg-white/10 hover:text-white">
               Explore Decor
             </NuxtLink>
           </div>
