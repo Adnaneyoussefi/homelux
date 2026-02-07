@@ -35,39 +35,6 @@ export const mockProducts = [
     tags: ['espresso', 'coffee', 'barista', 'italian']
   },
   {
-    id: 2,
-    name: 'Smart Air Fryer XL',
-    slug: 'smart-air-fryer-xl',
-    category: 'kitchen-appliances',
-    subcategory: 'Air Fryers',
-    price: 179.99,
-    originalPrice: 249.99,
-    discount: 28,
-    rating: 4.6,
-    reviewCount: 567,
-    inStock: true,
-    featured: true,
-    image: 'https://images.unsplash.com/photo-1585237672135-929d4a752772?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1585237672135-929d4a752772?w=800&q=80'
-    ],
-    description: 'Digital air fryer with 8 preset cooking modes, app control, and 5.5L capacity. Healthy cooking made easy.',
-    features: [
-      '8 preset cooking programs',
-      'WiFi and app control',
-      '5.5L extra large capacity',
-      'Non-stick basket',
-      'Dishwasher safe parts'
-    ],
-    specifications: {
-      power: '1700W',
-      capacity: '5.5L',
-      weight: '5.2kg',
-      dimensions: '30 x 30 x 35 cm'
-    },
-    tags: ['air fryer', 'healthy cooking', 'smart appliance']
-  },
-  {
     id: 3,
     name: 'Premium Stand Mixer',
     slug: 'premium-stand-mixer',
@@ -267,39 +234,6 @@ export const mockProducts = [
 
   // More Kitchen Appliances
   {
-    id: 9,
-    name: 'Stainless Steel Cookware Set',
-    slug: 'stainless-steel-cookware-set',
-    category: 'kitchen-appliances',
-    subcategory: 'Cookware',
-    price: 299.99,
-    originalPrice: 399.99,
-    discount: 25,
-    rating: 4.7,
-    reviewCount: 523,
-    inStock: true,
-    featured: false,
-    image: 'https://images.unsplash.com/photo-1584990347498-7ab0b9c66eb8?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1584990347498-7ab0b9c66eb8?w=800&q=80'
-    ],
-    description: '10-piece professional cookware set with tri-ply construction for even heating.',
-    features: [
-      'Tri-ply stainless steel construction',
-      'Includes 10 essential pieces',
-      'Oven safe up to 500°F',
-      'Dishwasher safe',
-      'Lifetime warranty'
-    ],
-    specifications: {
-      material: 'Stainless Steel',
-      pieces: '10',
-      weight: '12kg',
-      ovenSafe: 'Up to 500°F'
-    },
-    tags: ['cookware', 'stainless steel', 'professional']
-  },
-  {
     id: 10,
     name: 'Electric Kettle with Temperature Control',
     slug: 'electric-kettle-temperature-control',
@@ -334,72 +268,6 @@ export const mockProducts = [
   },
 
   // More Home Decor
-  {
-    id: 11,
-    name: 'Hand-Poured Soy Candle Set',
-    slug: 'hand-poured-soy-candle-set',
-    category: 'home-decor',
-    subcategory: 'Candles',
-    price: 54.99,
-    originalPrice: null,
-    discount: 0,
-    rating: 4.8,
-    reviewCount: 645,
-    inStock: true,
-    featured: true,
-    image: 'https://images.unsplash.com/photo-1602874801006-47c1c84e9bc0?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1602874801006-47c1c84e9bc0?w=800&q=80'
-    ],
-    description: 'Set of 3 luxury soy candles with essential oil blends. Hand-poured in artisan ceramic vessels.',
-    features: [
-      '100% natural soy wax',
-      'Essential oil fragrances',
-      'Ceramic vessels (reusable)',
-      '40+ hours burn time each',
-      'Set of 3 complementary scents'
-    ],
-    specifications: {
-      material: 'Soy Wax',
-      burnTime: '40+ hours',
-      weight: '1.5kg',
-      scents: 'Lavender, Sandalwood, Citrus'
-    },
-    tags: ['candles', 'soy', 'aromatherapy', 'handmade']
-  },
-  {
-    id: 12,
-    name: 'Woven Jute Area Rug',
-    slug: 'woven-jute-area-rug',
-    category: 'home-decor',
-    subcategory: 'Rugs',
-    price: 189.99,
-    originalPrice: 249.99,
-    discount: 24,
-    rating: 4.6,
-    reviewCount: 234,
-    inStock: true,
-    featured: false,
-    image: 'https://images.unsplash.com/photo-1600166898504-9c5b5e50e3ee?w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1600166898504-9c5b5e50e3ee?w=800&q=80'
-    ],
-    description: 'Natural jute rug with geometric pattern. Eco-friendly and durable for high-traffic areas.',
-    features: [
-      '100% natural jute fiber',
-      'Handwoven by artisans',
-      'Non-slip backing',
-      'Multiple sizes available',
-      'Eco-friendly'
-    ],
-    specifications: {
-      material: '100% Jute',
-      size: '200 x 300 cm',
-      thickness: '8mm',
-      weight: '8.5kg'
-    },
-    tags: ['rug', 'jute', 'natural', 'handwoven']
-  }
 ];
 
 export const categories = [
